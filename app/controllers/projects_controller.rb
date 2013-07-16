@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_filter :find_resource, only: [:show, :edit, :update]
+  
   respond_to :html
  
   def index
@@ -19,6 +21,9 @@ class ProjectsController < ApplicationController
     end
   end
  
+  def show
+  end
+ 
   def edit
     respond_with(@project)
   end
@@ -33,4 +38,7 @@ class ProjectsController < ApplicationController
   
   def destroy; respond_with @project = Project.destroy(params[:id]); end
   
+  def find_resource
+    @project = Project.find(params[:id])
+  end
 end
