@@ -17,8 +17,35 @@ group :development do
 #  gem 'better_errors'
 #  gem 'binding_of_caller'
 #  gem 'meta_request'
-  gem 'rails_info'
+  gem 'rails_info'#, path: '../../gem_repos/engines/rails_info'
   gem 'sextant'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
+group :test, :cucumber do
+  gem 'shoulda-matchers'
+  gem 'selenium-webdriver',       '2.27.2'
+  gem 'spork',                    '~> 1.0rc'
+  gem 'timecop'
+  gem 'simplecov', :require => false
+end
+
+group :test do
+  gem 'database_cleaner'
+end
+
+group :development, :test, :cucumber do
+  gem 'factory_girl_rails'
+end
+
+group :cucumber do
+  gem 'capybara',         '1.1.2'
+  gem 'capybara-webkit',  '0.13.0'
+  gem 'cucumber-rails',   '1.3.0', :require => false
+  gem 'launchy',          '2.0.5'
 end
 
 # Gems used only for assets and not required

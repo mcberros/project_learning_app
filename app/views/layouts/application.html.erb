@@ -11,6 +11,14 @@
 <%= render "shared/navigation" %>
 
 <div class="container-fluid">
+  <% unless flash.empty? %>
+    <div class="row-fluid">
+      <div class="span12">
+        <%= render 'layouts/shared/flash_messages' %>
+      </div>
+    </div>
+<% end %>    
+
 <%= yield %>
 </div>
 
