@@ -18,6 +18,7 @@ group :development do
 #  gem 'binding_of_caller'
 #  gem 'meta_request'
   gem 'rails_info'
+  gem 'sextant'
 end
 
 # Gems used only for assets and not required
