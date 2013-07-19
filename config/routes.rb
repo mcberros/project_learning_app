@@ -4,6 +4,12 @@ ProjectLearningApp::Application.routes.draw do
   end
 
   resources :stories
+
+  resources :stories do
+    resources :tasks
+  end
+  
+  resources :tasks
   
 	root to: 'home#index'
 

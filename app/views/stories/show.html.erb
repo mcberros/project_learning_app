@@ -2,4 +2,6 @@
 <%= @story.description %>
 
 <%= link_to 'Project ', @story.project %>
+<%= link_to 'Create Task', new_story_task_path(@story) %>
+<%= link_to 'Tasks', story_tasks_path(@story) %>
 <%= link_to 'Destroy Story', @story, method: :delete, confirm: 'Are you sure?' %>

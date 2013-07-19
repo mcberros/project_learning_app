@@ -1,0 +1,5 @@
+<h1>Task <%= @task.name %> </h1>
+<%= @task.description %>
+
+<%= link_to 'Story ', @task.story %>
+<%= link_to 'Destroy Task', @task, method: :delete, confirm: 'Are you sure?' %>
