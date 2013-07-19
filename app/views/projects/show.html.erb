@@ -1,6 +1,8 @@
 <h1>Project <%= @project.name %> </h1>
 <%= @project.description %>
 
-<%= link_to 'Create Story', new_project_story_path(@project) %>
-<%= link_to 'Stories', project_stories_path(@project) %>
-<%= link_to 'Destroy Project', @project, method: :delete, confirm: 'Are you sure?' %>
+<div>
+  <%= link_to 'Create Story', new_project_story_path(@project) %>
+  <%= link_to 'Stories', project_stories_path(@project) %>
+  <%= link_to 'Destroy Project', @project, method: :delete, confirm: 'Are you sure?' %>
+</div>
