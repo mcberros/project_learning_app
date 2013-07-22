@@ -46,6 +46,7 @@ group :cucumber do
   gem 'capybara-webkit',  '0.13.0'
   gem 'cucumber-rails',   '1.3.0', :require => false
   gem 'launchy',          '2.0.5'
+  gem 'guard-rspec'
 end
 
 # Gems used only for assets and not required
@@ -65,7 +66,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
