@@ -1,4 +1,6 @@
 ProjectLearningApp::Application.routes.draw do
+  get "password_resets/new"
+
   get "sessions/new"
 
   resources :projects do
@@ -22,7 +24,7 @@ ProjectLearningApp::Application.routes.draw do
   get 'log_out', to: 'sessions#destroy', :as => 'log_out'
   resources :sessions
   
-
+  resources :password_resets
 
 	root to: 'home#index'
 

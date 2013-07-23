@@ -10,6 +10,16 @@
 
 <%= render "shared/navigation" %>
 
+<div id='user_nav'>
+  <% if current_user %>
+    Logged in as <%= current_user.email %>
+    <%= link_to 'Log out', log_out_path%>
+  <% else %>
+    <%= link_to 'Sign_up', sign_up_path %> or
+    <%= link_to 'Log in', log_in_path %>
+  <% end %>
+</div>
+
 <div class="container-fluid">
   <% unless flash.empty? %>
     <div class="row-fluid">

@@ -264,7 +264,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.13)
   rails_info
-  rspec-rails (~> 2.0)
+  rspec-rails (~> 2.2)
   sass-rails (~> 3.2.3)
   selenium-webdriver (= 2.27.2)
   sextant
