@@ -1,0 +1,6 @@
+<%= simple_form_for @message, html: { class: 'form-horizontal' } do |f| %>
+  <%= f.error_notification %>
+  <%= f.hidden_field :parent_id %>
+  <%= f.input :content, label: 'New Message', :input_html => { :rows => 8 } %>
+  <%= f.button :submit, "Post Message" %>
+<% end %>

@@ -26,6 +26,8 @@ ProjectLearningApp::Application.routes.draw do
   
   resources :password_resets
 
+  resources :messages
+
 	root to: 'home#index'
 
 end

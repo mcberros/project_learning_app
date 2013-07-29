@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails',              '2.0.2'
 gem 'simple_form'
 gem 'less-rails'
+gem 'ancestry'
 
 group :development do
 #  gem 'better_errors'
