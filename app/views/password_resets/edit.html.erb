@@ -1,0 +1,9 @@
+<h1>Reset Password</h1>
+<%= simple_form_for @user, url: password_reset_path(params[:id]) do |f| %>
+	<%= f.error_notification %>
+	<%= f.input :password %>
+	<%= f.input :password_confirmation %>
+	<%= f.button :submit %>
+<% end %>
+
+<%= @user.errors.full_messages.inspect %>
