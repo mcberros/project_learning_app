@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728195102) do
+ActiveRecord::Schema.define(:version => 20130812140647) do
 
   create_table "messages", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -53,6 +53,13 @@ ActiveRecord::Schema.define(:version => 20130728195102) do
     t.datetime "updated_at",             :null => false
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
+    t.string   "auth_token"
+    t.string   "full_name"
+    t.string   "twitter_name"
+    t.string   "github_name"
+    t.string   "url"
+    t.string   "avatar_image_name"
+    t.text     "bio"
   end
 
 end
