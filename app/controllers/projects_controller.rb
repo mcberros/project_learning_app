@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  
   before_filter :find_resource, only: [:show, :edit, :update]
   
   respond_to :html
