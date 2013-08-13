@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       else
         cookies[:auth_token] =  @user.auth_token
       end
-      redirect_to root_url, :notice => 'Signed up!'
+      redirect_to user_steps_path
     else
       render 'new'
     end  
