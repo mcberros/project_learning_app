@@ -14,6 +14,8 @@ gem 'simple_form'
 gem 'less-rails'
 gem 'ancestry'
 gem 'draper'
+gem 'wicked'
+gem 'redcarpet'
 
 group :development do
 #  gem 'better_errors'
