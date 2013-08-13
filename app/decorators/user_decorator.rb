@@ -34,7 +34,9 @@ class UserDecorator < Draper::Decorator
   
   def bio
     handle_none(model.bio) do
-      Redcarpet.new(model.bio, :hard_wrap, :filter_html, :autolink).to_html.html_safe
+      render = Redcarpet::Render::HTML.new(hard_wrap: true, filter_html: true)
+      markdown = Redcarpet::Markdown.new(render, autolink: true)
+      h.raw markdown.render(model.bio)
     end
   end
   
