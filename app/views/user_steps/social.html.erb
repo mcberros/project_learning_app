@@ -1,0 +1,8 @@
+<%= simple_form_for current_user, url: wizard_path do |f| %>
+  <%= f.error_notification %>
+  <h2>Where can we find you?</h2>
+  <%= f.input :twitter_name %>
+  <%= f.input :github_name %>
+  <%= f.input :url %>
+  <%= f.button :submit, "Continue" %> or <%= link_to "skip this step", next_wizard_path %>
+<% end %>
