@@ -1,0 +1,8 @@
+<%= simple_form_for @survey, html: { class: 'form-horizontal' } do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.simple_fields_for :questions do |q| %>
+    <%= render 'question_fields', f: q %>
+  <% end %>
+  <%= f.button :submit %>
+<% end %>

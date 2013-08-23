@@ -1,0 +1,6 @@
+<%= f.input :content, label: 'Question', :input_html => { :rows => 3 }%>
+<%= f.input :_destroy, label: 'Remove', as: :boolean %>
+
+<%= f.simple_fields_for :answers do |a| %>
+    <%= render 'answer_fields', f: a %>
+  <% end %>
