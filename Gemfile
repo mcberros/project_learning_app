@@ -16,6 +16,7 @@ gem 'ancestry'
 gem 'draper'
 gem 'wicked'
 gem 'redcarpet'
+gem 'geocoder'
 
 group :development do
 #  gem 'better_errors'
