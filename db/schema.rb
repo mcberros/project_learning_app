@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130813130252) do
+ActiveRecord::Schema.define(:version => 20130823152514) do
+
+  create_table "answers", :force => true do |t|
+    t.integer  "question_id"
+    t.string   "content"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "messages", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -29,12 +44,25 @@ ActiveRecord::Schema.define(:version => 20130813130252) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "questions", :force => true do |t|
+    t.integer  "survey_id"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "stories", :force => true do |t|
     t.integer  "project_id"
     t.string   "name"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "surveys", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "tasks", :force => true do |t|

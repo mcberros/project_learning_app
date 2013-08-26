@@ -1,4 +1,7 @@
 ProjectLearningApp::Application.routes.draw do
+  resources :locations
+
+
   get "password_resets/new"
 
   get "sessions/new"
@@ -28,6 +31,8 @@ ProjectLearningApp::Application.routes.draw do
   resources :password_resets
 
   resources :messages
+  
+  resources :surveys
 
 	root to: 'home#index'
 
