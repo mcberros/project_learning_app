@@ -17,6 +17,7 @@ gem 'draper'
 gem 'wicked'
 gem 'redcarpet'
 gem 'geocoder'
+gem 'acts-as-taggable-on'
 
 group :development do
 #  gem 'better_errors'

@@ -1,0 +1,14 @@
+<div id="tag_cloud">
+  <% tag_cloud Article.tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class%>
+  <% end %>
+</div>
+
+<% @articles.each do |article| %>
+  <h2><%= link_to article.name, article_path(article.id) %></h2>
+  <%= article.content %>
+  <p>Tags: <%= raw article.tag_list.map {|tag| link_to tag, tag_path(tag)}.join(', ') %></p>
+  </br>
+<% end %>
+
+<%= link_to 'New Article', new_article_path %>

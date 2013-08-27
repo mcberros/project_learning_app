@@ -1,5 +1,8 @@
 ProjectLearningApp::Application.routes.draw do
   resources :locations
+  
+  resources :articles
+  get 'tags/:tag', to: 'articles#index', as: :tag
 
 
   get "password_resets/new"

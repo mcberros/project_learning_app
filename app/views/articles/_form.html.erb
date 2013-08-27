@@ -1,0 +1,9 @@
+<%= simple_form_for(@article) do |f| %>
+  <%= f.error_notification %>
+  
+  <%= f.input :name %>
+  <%= f.input :tag_list, label: 'Tags separated by comas' %>
+  <%= f.input :content, input_html: {rows: 8} %>
+  
+  <%= f.button :submit %>
+<% end %>
