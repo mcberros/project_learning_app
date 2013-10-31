@@ -1,5 +1,5 @@
 Create role in postgres
 $psql
-  CREATE USER project_learning_app WITH PASSWORD 'project_learning_app' CREATEUSER CREATEDB;
+  CREATE USER project_learning_app WITH PASSWORD 'xxxx' CREATEUSER CREATEDB;
 
 rake db:migrate
