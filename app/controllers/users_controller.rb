@@ -26,7 +26,7 @@ class UsersController < ApplicationController
       redirect_to user_steps_path
     else
       render 'new'
-    end  
+    end
   end
   
   def show

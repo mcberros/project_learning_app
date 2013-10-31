@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130827112435) do
+ActiveRecord::Schema.define(:version => 20130903132334) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(:version => 20130827112435) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.text     "content"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "locations", :force => true do |t|
@@ -44,6 +50,17 @@ ActiveRecord::Schema.define(:version => 20130827112435) do
   end
 
   add_index "messages", ["ancestry"], :name => "index_messages_on_ancestry"
+
+  create_table "products", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "name"
+    t.decimal  "price"
+    t.boolean  "discontinued", :default => false, :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "products", ["category_id"], :name => "index_products_on_category_id"
 
   create_table "projects", :force => true do |t|
     t.string   "name"

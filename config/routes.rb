@@ -36,6 +36,17 @@ ProjectLearningApp::Application.routes.draw do
   resources :messages
   
   resources :surveys
+  
+  #resources :products
+  
+  resources :categories
+  
+  resources :products do
+    collection do
+      post :edit_multiple
+      put :update_multiple
+    end
+  end
 
 	root to: 'home#index'
 
